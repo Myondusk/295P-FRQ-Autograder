@@ -7,7 +7,7 @@ Setting up the UI and Flask server
 
 If Python or npm are not present on the machine, they should also be installed first (using sudo or pip).
 
-Setting up the server:
+Setting up the interface:
 1. Open up Powershell (or Command Prompt)
 2. Navigate to the ui folder of the code
 3. `npm install`
@@ -22,6 +22,16 @@ Setting up the Flask app:
 4. `flask run`
 
 This starts the flask app which receives requests and returns responses.
+
+What the prototype does
+------------------------
+Enter a set of keywords, comma separated, into the keyword field, and those keywords will be compared with the text of the student field.
+
+You can also enter synonyms for words, space separated. For example, with the keywords `blue aqua, red ruby`, the student text `the sky is blue, roses are ruby` would still be considered fully correct.
+
+When "Score" is clicked, the app sends request to the Flask server at `/prediction`. The endpoint just does string compare, prints the keywords found, and the percentage of keywords found.
+
+This functionality should be very different in the final product, but it is a framework for the UI and structure.
 
 Various issues that may arise while trying to run or compile:
 ------------------------
